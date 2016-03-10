@@ -4,4 +4,4 @@ var test = require('./test'),
 
 test();
 
-puts('OK - '+( (new Date).getTime() - startTS )/1000+'s');
+console.log('OK - '+( (new Date).getTime() - startTS )/1000+'s');

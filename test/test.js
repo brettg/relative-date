@@ -13,7 +13,6 @@ var SECOND = 1000,
 
 var reference = 157765000000, // 01.01.1975 00:00
     spans = [
-      ['just now',reference*SECOND],
       ['just now',reference-41*SECOND],
       ['a minute ago',reference-42*SECOND],
       ['a minute ago',reference-MINUTE],
@@ -33,7 +32,28 @@ var reference = 157765000000, // 01.01.1975 00:00
       ['12 months ago',reference-YEAR+HOUR],
       ['a year ago',reference-YEAR],
       ['2 years ago',reference-YEAR*2],
-      ['5 years ago', 0]
+      ['5 years ago', 0],
+
+      ['in a moment',reference+41*SECOND],
+      ['a minute from now',reference+42*SECOND],
+      ['a minute from now',reference+MINUTE],
+      ['2 minutes from now',reference+MINUTE*1.5],
+      ['59 minutes from now',reference+MINUTE*59],
+      ['an hour from now',reference+HOUR],
+      ['2 hours from now',reference+HOUR*1.5],
+      ['16 hours from now',reference+HOUR*16],
+      ['23 hours from now',reference+HOUR*23],
+      ['tomorrow',reference+DAY*1.8],
+      ['3 days from now',reference+DAY*3],
+      ['6 days from now',reference+DAY*6],
+      ['a week from now',reference+WEEK],
+      ['2 weeks from now',reference+WEEK*2],
+      ['4 weeks from now',reference+WEEK*4],
+      ['a month from now',reference+MONTH*1.2],
+      ['12 months from now',reference+YEAR-HOUR],
+      ['a year from now',reference+YEAR],
+      ['2 years from now',reference+YEAR*2],
+      ['5 years from now', reference+YEAR*5]
     ];
 
 function test(){
