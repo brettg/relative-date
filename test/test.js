@@ -66,6 +66,10 @@ function test(){
     assert.equal(relativeDate(el[1], reference), el[0]);
   };
 
+  var localized = relativeDate.localize({days: 'días', pastPrefix: 'hace'});
+  assert.equal(localized(reference-DAY*3, reference), 'hace 3 días');
+  localized = relativeDate.localize({months: 'moons', futurePrefix: 'hence'});
+  assert.equal(localized(reference+MONTH*8, reference), 'hence 8 moons');
 }
 
 typeof module != 'undefined' && ( module.exports = test );
